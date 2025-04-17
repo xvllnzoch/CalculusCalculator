@@ -125,7 +125,6 @@ namespace CalculusCalculator
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Calculating: lim(x→{0}) {1}", approachValue, function);
 
-            // This is a simplified example - a real implementation would need a proper parser
             string result = SolveLimit(function, approachValue);
 
             Console.WriteLine("Result: " + result);
@@ -180,7 +179,6 @@ namespace CalculusCalculator
 
         static string SolveLimit(string function, string approachValue)
         {
-            // This is a very simplified version - a real implementation would need
             // a proper expression parser and limit solver
 
             try
@@ -207,7 +205,7 @@ namespace CalculusCalculator
                     // This is just for demonstration - don't actually evaluate like this
                     function = function.Replace("x", approachValue);
 
-                    // Very simplified evaluation
+                    // simplified evaluation
                     if (function.Contains("/0") && !function.Contains("0/0"))
                         return approachValue == "0" ? "∞" : "Undefined (division by zero)";
 
@@ -224,10 +222,10 @@ namespace CalculusCalculator
 
         static string SolveDerivative(string function, int order)
         {
-            // This is a very simplified version - a real implementation would need
+            // only simplified version - a real implementation would need
             // a proper expression parser and derivative solver
             /*
-             * I did google because I don't know how to calculate derivatives
+             * I did google because I don't know how to calculate these
              */
 
             try
@@ -280,7 +278,7 @@ namespace CalculusCalculator
 
         static string EvaluateSimpleExpression(string expr)
         {
-            // use a proper expression evaluator
+            // Use a proper expression evaluator
             // imitate like a proper solver
 
             if (expr.Contains("^"))
@@ -313,7 +311,7 @@ namespace CalculusCalculator
             return expr; // Return as-is if we can't evaluate
         }
 
-        // for sound effects cuz I'm lazy to import mp3s
+        // for sound effects cuz I'm too lazy to import MP3s
         static void PlayInteractionSound()
         {
             Console.Beep(800, 100);
