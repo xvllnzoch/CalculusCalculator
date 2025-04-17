@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Threading;
 
 namespace CalculusCalculator
-    /*
-     * NOTE:
-     * This program can only answer Limits and Derivatives
-     * I am not going to code other topics like Integrals, Series, etc.
-     * Because I suck at calculus
-     * Hope you enjoy this program
-     */
+/*
+ * NOTE:
+ * This program can only answer Limits and Derivatives
+ * I am not going to code other topics like Integrals, Series, etc.
+ * Because I suck at calculus
+ * Hope you enjoy this program
+ */
 {
     class Program
     {
@@ -59,7 +59,7 @@ namespace CalculusCalculator
 
         static void ShowMainMenu()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Please select an operation:");
             Console.WriteLine("<><><><><><><><><><><><><>");
             Console.WriteLine("1. Calculate Limit");
@@ -103,11 +103,11 @@ namespace CalculusCalculator
             Console.Clear();
             DisplayHeader();
 
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Limit Calculation");
             Console.WriteLine("><><><><><><><><>\n");
             Console.ResetColor();
-
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Enter the function");
             Console.WriteLine("Using 'x' as a variable");
             Console.WriteLine("ex. |(x^2 - 1)/(x - 1) ");
@@ -138,11 +138,11 @@ namespace CalculusCalculator
             Console.Clear();
             DisplayHeader();
 
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Derivative Calculation");
             Console.WriteLine("><><><><><><><><><><><>\n");
             Console.ResetColor();
-
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Enter the function");
             Console.WriteLine("Using 'x' as a variable");
             Console.WriteLine("ex. |x^2 + 3x + 2): ");
@@ -207,16 +207,16 @@ namespace CalculusCalculator
 
                     // simplified evaluation
                     if (function.Contains("/0") && !function.Contains("0/0"))
-                        return approachValue == "0" ? "∞" : "Undefined (division by zero)";
+                        return approachValue == "0" ? "∞" : "Undefined (division by zero duhhh)";
 
                     return EvaluateSimpleExpression(function);
                 }
 
-                return "Could not determine limit automatically. Please consult your professor.";
+                return "Could not determine limit automatically. sabihin kay prof.";
             }
             catch
             {
-                return "Could not determine limit automatically. Please consult your professor.";
+                return "Could not determine limit automatically. sumbong kay batman.";
             }
         }
 
